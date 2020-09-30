@@ -1,0 +1,59 @@
+/* body{
+  /* background-color: #7e8a97; */
+/* .page-container {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  } */
+/* .intro {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+  } */
+.front-page {
+  background-image: url("../image/study.jpg");
+  background-size: cover;
+  background-color: #7e8a97;
+}
+.navbar{
+  padding-top:1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.75rem;
+}
+.navbar-brand{
+  font-size: 1.75rem;
+}
+
+.page-container {
+  position: relative;
+  top: -40px;
+}
+
+.btn {
+  background-color: #008080;
+  padding-bottom: 10px;
+  color: #ffff;
+}
+
+.btn:hover {
+  background-color: #3b6978;
+  color: #ffff;
+}
+
+.btn-pill {
+  border-radius: 30px;
+}
+
+.form-box {
+  align-items: center;
+}
+
+.form-box {
+  border-radius: 7px;
+
+  margin-top: 37%;
+  margin-right: 7%;
+  margin-bottom: 2%;
+  padding: 5%;
+}
