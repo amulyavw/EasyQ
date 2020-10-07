@@ -1,0 +1,33 @@
+body{
+  background-color:#ffff;
+}
+
+
+.navbar{
+  background-color: #00587a;
+}
+.navbar-nav > li{
+  padding-left:200px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: 4.5%;
+}
+
+.sidenav a {
+  padding: 20px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #000;
+  display: block;
+}
