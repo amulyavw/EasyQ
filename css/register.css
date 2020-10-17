@@ -1,0 +1,19 @@
+body {
+  background-image: url("../image/pattern.jpg");
+}
+
+.container {
+  display: flex;
+  border-color: #ffff;
+  border-width: thin;
+  justify-content: center;
+  align-items: center;
+  /* padding: 25px 0;
+  justify-content:center;
+  /* font-size: 30px;
+  width: 500px;
+  align-items: center; */
+}
+.box{
+  background-color: yellow;
+}
