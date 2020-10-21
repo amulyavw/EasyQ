@@ -1,0 +1,47 @@
+
+.front-page {
+  background-image: url("../image/library.jpg");
+  background-size: cover;
+  background-color: #7e8a97;
+}
+.navbar{
+  padding-top:1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.75rem;
+}
+.navbar-brand{
+  font-size: 1.75rem;
+}
+
+.page-container {
+  position: relative;
+  top: -40px;
+}
+
+.btn {
+  background-color: #008080;
+  padding-bottom: 10px;
+  color: #ffff;
+}
+
+.btn:hover {
+  background-color: #3b6978;
+  color: #ffff;
+}
+
+.btn-pill {
+  border-radius: 30px;
+}
+
+.form-box {
+  align-items: center;
+}
+
+.form-box {
+  border-radius: 7px;
+
+  margin-top: 35%;
+  margin-right: 6%;
+  margin-bottom: 3%;
+  padding: 5%;
+}
