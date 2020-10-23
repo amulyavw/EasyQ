@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>sign up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class ="front-page">
+    <nav class="navbar navbar-light bg-transparent">
+      <a class="navbar-brand text-white">EasyQ</a>
+
+        <form class="form-inline" action="login" method="post">
+        <div class="form-group mb-2">
+          <!-- <label for="staticEmail2" class="sr-only">Email</label> -->
+          <input type="text" class="form-control" id="regNo" placeholder="Registration Number">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <!-- <label for="inputPassword2" class="sr-only">Password</label> -->
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn mb-2 btn-pill">Login</button>
+      </form>
+    </nav>
+
+
+
+    <div class="page-container">
+      <div class="col-4 ml-auto">
+        <form action="reg" method="post" class="form-box" style="background:white">
+          <h3 class="h4 text-black mb-4">Sign Up</h3>
+          <div class="row">
+            <div class="form-group col">
+              <input type="text" class="form-control" name="firstname"placeholder="First Name">
+            </div>
+            <div class="form-group col">
+              <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="email" placeholder="Email address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control"name="regNo" placeholder="Registration number">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <div class="form-group mb-4">
+            <input type="password" class="form-control" name= "re-password" placeholder="Re-type Password">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-pill" value="Sign up">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
