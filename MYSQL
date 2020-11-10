@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS `studentlogin` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `studentlogin`;
+CREATE TABLE students (
+`regno` int(9) Primary Key ,
+`firstname` VARCHAR(30) NOT NULL,
+`lastname` VARCHAR(30) NOT NULL,
+`email` VARCHAR(50) Not Null,
+`password` VARCHAR(16) Not Null,
+`created_at` datetime NOT NULL,
+ `updated_at` datetime NOT NULL 
+ )
+ ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ 
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'amulya0210';
+ flush privileges;
+select * from students order by created_at;
+ALTER table students
+CHANGE regno regno int(9);
+Use studentlogin;
+ Alter table students modify password varchar(128);
