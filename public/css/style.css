@@ -2,18 +2,32 @@ body{
   background-color:#ffff;
 }
 
-.flexbox{
+/* header{
   display: flex;
   justify-content: space-around;
-}
-.navbar{
-  background-color: #00587a;
-}
+} */
 .navbar-brand{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight:600;
 }
-.navbar-nav > li{
-  padding-left:100px;
+.navbar-brand span{
+  font-size: 1.6rem;
+  color: #00adb5;
+  font-weight:600;
+}
+.nav-link{
+  color: #99a8b2;
+  font-size: 1rem;
+}
+.active{
+  color:#fff;
+}
+.nav-tabs{
+  border-bottom: 0;
+}
+.nav-link:hover{
+  color: #00adb5;
 }
 
 .sidenav {
@@ -23,7 +37,6 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #e8e8e8;
   overflow-x: hidden;
   padding-top: 25px;
   margin-top: 5%;
@@ -43,6 +56,7 @@ body{
 }
 .questionBox{
   margin-top: 2%;
+  text-align: center;
 }
 textarea::placeholder{
   font-size:1.5rem;

@@ -1,37 +1,40 @@
 const md5 = require('md5');
 var connection = require('./../config');
+var path = require ('path');
 
   module.exports.authenticate = function(req, res) {
+  console.log(req.body);
   var regno = req.body.regNo;
   var password = md5(req.body.password);
 
 
   connection.query('SELECT * FROM students WHERE regno = ?', [regno], function(error, results, fields) {
       if (error) {
-        res.json({
+        res.status(400).json({
           status: false,
           message: 'there are some error with query'
         })
       }
     else {
         if (results.length > 0) {
-          if (result.password == password) {
-            res.sendFile(path.join(__dirname, '../', 'register.html'))
+          if (results[0].password == password) {
+            res.json({
+              status:true,
+            })
+          }
+          else{
+            res.status(400).json({
+              status:false,
+              message:"wrong password"
+            })
           }
         }
         else {
-          res.json({
+          res.status(400).json({
             status: false,
-            message: "Registration number and password does not match"
+            message: "The password doesnot belong to the registeration number"
           });
         }
-
       }
-      // else {
-      //   res.json({
-      //     status: false,
-      //     message: "Registration does not exits"
-      //   })
-      // }
   });
 }

@@ -9,58 +9,81 @@
 </head>
 
 <body>
-  <div class ="front-page">
+  <div class="front-page">
     <nav class="navbar navbar-light bg-transparent">
       <a class="navbar-brand text-white">EasyQ</a>
-
-        <form class="form-inline" action="login" method="post">
+      <!-- login navbar -->
+      <form class="form-inline">
         <div class="form-group mb-2">
-          <!-- <label for="staticEmail2" class="sr-only">Email</label> -->
-          <input type="text" class="form-control" id="regNo" placeholder="Registration Number">
+          <input type="text" class="form-control" name="regNo" id="regNo" placeholder="Registration Number">
         </div>
         <div class="form-group mx-sm-3 mb-2">
-          <!-- <label for="inputPassword2" class="sr-only">Password</label> -->
-          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
         </div>
-        <button type="submit" class="btn mb-2 btn-pill">Login</button>
+        <button type="button" class="btn mb-2 btn-pill" id="loginButton">Login</button>
       </form>
     </nav>
 
-
-
+    <!-- signup -->
     <div class="page-container">
       <div class="col-4 ml-auto">
-        <form action="reg" method="post" class="form-box" style="background:white">
+        <form action="reg" class="form-box" style="background:white">
           <h3 class="h4 text-black mb-4">Sign Up</h3>
           <div class="row">
             <div class="form-group col">
-              <input type="text" class="form-control" name="firstname"placeholder="First Name">
+              <input type="text" class="form-control" name="firstname" id="fname" placeholder="First Name">
             </div>
             <div class="form-group col">
-              <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+              <input type="text" class="form-control" name="lastname" id="lname" placeholder="Last Name">
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="Email address">
+            <input type="text" class="form-control" name="email" id="email" placeholder="Email address">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control"name="regNo" placeholder="Registration number">
+            <input type="text" class="form-control" name="regNo" id="regNo" placeholder="Registration number">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="password" class="form-control" name="password"id="password" placeholder="Password">
           </div>
           <div class="form-group mb-4">
-            <input type="password" class="form-control" name= "re-password" placeholder="Re-type Password">
+            <input type="password" class="form-control" name="re-password" id="rpassword" placeholder="Re-type Password">
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-pill" value="Sign up">
+          <button type="button" class="btn mb-2 btn-pill" id="signupButton">Sign up</button>
           </div>
         </form>
 
       </div>
     </div>
-  </div>
 
+  <div class="reg-form">
+    <div class="reg-content">
+      <h3>Fill your details</h3>
+      <form class="" action="Q&A" method="post">
+        <select id="inputSem" name="">
+          <option value="">Semester</option>
+          <option value="">I</option>
+          <option value="">II</option>
+          <option value="">III</option>
+          <option value="">IV</option>
+          <option value="">V</option>
+          <option value="">VI</option>
+          <option value="">VII</option>
+          <option value="">VIII</option>
+        </select>
+        <select id="inputStream" name="">
+          <option value="">Stream</option>
+          <option value="">CSE</option>
+          <option value="">IT</option>
+          <option value="">CCE</option>
+        </select>
+        <button type="submit" name="button" class="btn btn-pill">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <script src="register.js" charset="utf-8"></script>
 </body>
 
 </html>
