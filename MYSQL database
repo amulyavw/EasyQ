@@ -1,0 +1,59 @@
+CREATE DATABASE IF NOT EXISTS `easyq` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+Use easyq;
+create table users(
+id int key,
+regno int(9) unique,
+firstName VARCHAR(30) NOT NULL,
+lastName VARCHAR(30) NOT NULL,
+email VARCHAR(50) Not Null,
+password VARCHAR(16) Not Null,
+created_at datetime NOT NULL,
+updated_at datetime NOT NULL
+);
+
+alter table users add column type enum ('student', 'teacher');
+ Alter table users modify password varchar(128);
+ alter table users modify id int auto_increment;
+ select * from users;
+ 
+ create table streams(
+ id int auto_increment key,
+ name VARCHAR(50) NOT NULL
+ );
+ 
+create table courses(
+id int auto_increment key,
+name VARCHAR(50) NOT NULL,
+stream_id int,
+semester int(2),
+FOREIGN KEY (stream_id) REFERENCES streams(id)
+);
+
+create table questions(
+id int auto_increment key,
+question varchar(2000) not null,
+user_id int,
+FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+create table answers(
+id int auto_increment key,
+answer varchar(5000) not null,
+user_id int,
+question_id int,
+FOREIGN KEY (user_id) REFERENCES users(id),
+FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+ INSERT INTO streams(name)
+ values('CCE');
+ Select * from courses;
+ INSERT INTO courses(name, stream_id, semester)
+ values('STLD', '1', '1');
+ select * from questions;
+ 
+SELECT users.id as user_id, users.regno, concat(users.firstName,' ', users.lastName)as user_name, questions.id as question_id, questions.question
+FROM questions
+INNER JOIN users
+ON questions.user_id=users.id;
+alter table questions add column course_id int;
+ALTER TABLE questions ADD CONSTRAINT FOREIGN KEY (`course_id`) REFERENCES courses(id);
