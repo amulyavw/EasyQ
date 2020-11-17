@@ -27,7 +27,7 @@
     <!-- signup -->
     <div class="page-container">
       <div class="col-4 ml-auto">
-        <form action="reg" class="form-box" style="background:white">
+        <form class="form-box" style="background:white">
           <h3 class="h4 text-black mb-4">Sign Up</h3>
           <div class="row">
             <div class="form-group col">
@@ -41,47 +41,35 @@
             <input type="text" class="form-control" name="email" id="email" placeholder="Email address">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="regNo" id="regNo" placeholder="Registration number">
+            <input type="text" class="form-control" name="regNo" id="sRegNo" placeholder="Registration number">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password"id="password" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="sPassword" placeholder="Password">
           </div>
           <div class="form-group mb-4">
-            <input type="password" class="form-control" name="re-password" id="rpassword" placeholder="Re-type Password">
+            <input type="password" class="form-control" name="re-password" id="rPassword" placeholder="Re-type Password">
           </div>
           <div class="form-group">
-          <button type="button" class="btn mb-2 btn-pill" id="signupButton">Sign up</button>
+            <button type="button" class="btn mb-2 btn-pill" id="signupButton">Sign up</button>
           </div>
         </form>
 
       </div>
     </div>
 
-  <div class="reg-form">
-    <div class="reg-content">
-      <h3>Fill your details</h3>
-      <form class="" action="Q&A" method="post">
-        <select id="inputSem" name="">
-          <option value="">Semester</option>
-          <option value="">I</option>
-          <option value="">II</option>
-          <option value="">III</option>
-          <option value="">IV</option>
-          <option value="">V</option>
-          <option value="">VI</option>
-          <option value="">VII</option>
-          <option value="">VIII</option>
-        </select>
-        <select id="inputStream" name="">
-          <option value="">Stream</option>
-          <option value="">CSE</option>
-          <option value="">IT</option>
-          <option value="">CCE</option>
-        </select>
-        <button type="submit" name="button" class="btn btn-pill">Submit</button>
-      </form>
+    <div class="reg-form">
+      <div class="reg-content">
+        <h3>Fill your details</h3>
+        <form id="detailForm" method="post">
+          <select id="inputSem">
+          </select>
+          <select id="inputStream">
+
+          </select>
+          <button type="button"id="submitButton" class="btn btn-pill">Submit</button>
+        </form>
+      </div>
     </div>
-  </div>
   </div>
   <script src="register.js" charset="utf-8"></script>
 </body>

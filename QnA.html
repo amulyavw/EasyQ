@@ -34,16 +34,34 @@
 </nav>
 
 <div class="sidenav">
-  <a href="#">COA</a>
-  <a href="#">STLD</a>
-  <a href="#">OOPJ</a>
-  <a href="#">DS</a>
-    <a href="#">Maths</a>
+  <ul class="sidenavbar" id="sidenav">
+    <!-- <li><a class= "side-link activeSub" href="#">DS</a></li>
+    <li><a class="side-link" href="#">COA</a></li>
+     <li><a class="side-link"  href="#">STLD</a></li>
+     <li><a class="side-link" href="#"></a></li>
+    <li> <a class="side-link" href="#"></a></li> -->
+  </ul>
+
 </div>
+
 <div class="flexbox-container">
-     <textarea class = "questionBox" rows = "3" cols = "80" placeholder="What is your question?"></textarea>
+  <form class="questionBox">
+    <div class="form-group">
+      <label class="askQ">Ask your Question</label>
+      <textarea class="form-control" id="question" name="postBody" rows="5" cols="30"></textarea>
+    </div>
+    <button class="btn btn-pill" type="button" id="postButton" name="button">Post</button>
+  </form>
+
+</div>
+<div class="container-sm p-4 my-3 border" id="quesBox">
+  <h5>Questions</h5>
+  <br>
+
 </div>
 
+<script src="compose.js" charset="utf-8"></script>
 
+</script>
   </body>
 </html>

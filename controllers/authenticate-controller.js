@@ -8,7 +8,7 @@ var path = require ('path');
   var password = md5(req.body.password);
 
 
-  connection.query('SELECT * FROM students WHERE regno = ?', [regno], function(error, results, fields) {
+  connection.query('SELECT * FROM users WHERE regno = ?', [regno], function(error, results, fields) {
       if (error) {
         res.status(400).json({
           status: false,
