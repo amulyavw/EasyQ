@@ -17,6 +17,7 @@ body{
 }
 .active{
   color:#fff;
+  background-color: #00adb5;
 }
 .nav-tabs{
   border-bottom: 0;
@@ -27,7 +28,7 @@ body{
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 100px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -46,15 +47,36 @@ body{
   text-decoration: none;
   font-size: 1.25rem;
   display: block;
+  cursor: pointer;
 }
-.side-link{
+.side-link {
   color: #000;
 }
-.sidenav a:active{
-  color: red;
+ul li a.activeCourse{
+  background-color:#3b6978;
+  color: #fff;
+  border-radius: 3px;
+}
+ul li a.active{
+  background-color:#00adb5;
+    color: #fff;
+    border-radius: 3px;
 }
 .sidenav a:hover {
   color:#00adb5;
+}
+.flexbox{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+}
+h5{
+  padding-top: 30px;
+  padding-left:325px;
+}
+.quesCont{
+  padding-top: 10px;
+  width: 50%;
 }
 
 .flexbox-container{
@@ -70,7 +92,16 @@ label{
 width: 50%;
 padding-top: 30px;
 }
-
+.ansBox{
+width: 50%;
+padding-top: 30px;
+}
+.question-link{
+  color: #000;
+}
+.question-link:hover{
+  color: #000;
+}
 .btn {
   background-color: #008080;
   padding-bottom: 10px;

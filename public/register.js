@@ -62,6 +62,7 @@ document.getElementById('signupButton').addEventListener('click',
             alert("Please fill all the entries");
           } else {
             localStorage.setItem('regNo', sRegNo)
+              getStreams();
             document.querySelector('.reg-form').style.display = 'flex';
           }
         })

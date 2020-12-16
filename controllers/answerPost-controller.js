@@ -1,20 +1,22 @@
-// API for posting questions
 var express=require("express");
 var connection = require('./../config');
 var path = require('path');
 var user_name;
 
-module.exports.question=function(req,res){
+module.exports.answer=function(req,res){
     console.log(req.body);
     var regno = req.body.regNo;
+    var questionId = req.body.questionId;
+    console.log(questionId);
+
     getUserId(regno, function(userId){
       var post={
-          question:req.body.question,
+          question_id:questionId,
           user_id:userId,
-          course_id:req.query.courseId
+          answer:req.body.answer
       }
       console.log(user_name)
-      connection.query('INSERT INTO questions Set?', post, function (error, results, fields)
+      connection.query('INSERT INTO answers Set?', post, function (error, results, fields)
       {
         if (error) {
           console.log(error);

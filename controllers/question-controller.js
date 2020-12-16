@@ -3,9 +3,9 @@ var express=require("express");
 var connection = require('./../config');
 var path = require('path');
 module.exports.questions=function(req,res){
-
+var course_id = req.query.courseId;
 var questions=[]
-connection.query("SELECT users.id as user_id, users.regno, concat(users.firstName,' ', users.lastName)as user_name, questions.id as question_id, questions.question, questions.course_id FROM questions INNER JOIN users ON questions.user_id=users.id ORDER BY question_id DESC", function(error,results,fields){
+connection.query("SELECT users.id as user_id, users.regno, concat(users.firstName,' ', users.lastName)as user_name, questions.id as question_id, questions.question, questions.course_id FROM questions INNER JOIN users ON questions.user_id=users.id where questions.course_id=? ORDER BY question_id DESC",[course_id], function(error,results,fields){
   if(error){
       res.status(400).json({
       status:false,
